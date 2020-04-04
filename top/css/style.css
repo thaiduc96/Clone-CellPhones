@@ -7,6 +7,10 @@ header{
     display: flex;
 }
 
+.Menu p{
+    margin-bottom: unset;
+}
+
 .Menu-branch{
     height: 55px;
     display: flex;
@@ -182,7 +186,221 @@ header{
 }
 
 /* NAV NAV NAV NAV*/
-.Nav {
+.Nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 50px;
+    overflow: hidden;
+    transition: all ease-in-out 0.3s;
+    width: 100%;
+}
+
+.Nav-active{
+    height: 100%;
+}
+
+.Nav-content {
     width: 100%;
     height: 50px;
+    display: flex;
+    background: #3c3d41;
+}
+
+.Nav-logo{
+    padding: 7px;
+    height: 50px;
+    width: 50px;
+}
+
+.Nav-search{
+    flex-grow: 1;
+    padding: 7px;
+}
+
+.Nav-search-content{
+    background: #fff;
+    border-radius:3px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.Nav-search_button{
+    align-items: center;
+    justify-content: center;
+    background: #e11b1e;
+    color: #fff;
+    display: flex;
+    height: 100%;
+    width: 35px;
+    font-size: 20px;
+}
+
+.Nav-search_input{
+    flex-grow: 1;
+}
+
+.Nav-search_input input{
+    height: 100%;
+    width: 100%;
+    padding: 0 5px;
+    font-size: 16px;
+}
+
+.Nav-hamburger{
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+}
+
+.Nav-hamburger-content{
+    height: 20px;
+    width: 30px;
+    position: relative;
+}
+.Nav-hamburger-content_icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    transition: all ease-in-out 0.3s;
+}
+
+.Nav-hamburger-content_icon:nth-child(2){
+    top: 8px;
+}
+.Nav-hamburger-content_icon:nth-child(3){
+    top: 16px;
+}
+
+.Nav-active .Nav-hamburger-content_icon:first-child{
+    opacity: 0;
+    right: -60px;
+    transform: rotate(-135deg);
+}
+.Nav-active .Nav-hamburger-content_icon:nth-child(2){
+    top: 8px;
+    transform: rotate(-135deg);
+
+}
+.Nav-active .Nav-hamburger-content_icon:nth-child(3){
+    top: 8px;
+    transform: rotate(135deg);
+}
+
+.Nav-menu{
+    background: rgba(0,0,0,0.4);
+    flex-grow: 1;
+    width: 100%;
+    transition: all ease-in-out 0.3s;
+}
+
+.Nav-active .Nav-menu{
+    height: auto;
+}
+
+.Nav-menu-content{
+    background: #fff;
+}
+
+.Nav-menu-content-list{
+    padding: 10px 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Nav-menu-content-item{
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 13px;
+    text-align: center;
+    padding: 5px 0;
+    margin: 3px 0.5%;
+    width: 24%;
+}
+
+.Nav-menu-content-footer{
+    border-top: 1px solid #ddd ;
+    display: flex;
+    background: #d2d2d2;
+    height: 40px;
+}
+.Nav-menu-content-footer-contact {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+.Nav-menu-content-footer-contact img{
+    height: 30px;
+    width: 30px;
+}
+
+.Nav-menu-content-footer-contact_img a{
+    color: #e11b1e;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.Nav-menu-content-footer-location{
+    border-left: 1px solid #ddd;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.Nav-menu-content-footer-location p{
+    margin-bottom: unset;
+}
+
+.Nav-menu-content-footer-location select{
+    font-size: 16px;
+    margin-left: 5px;
+    margin-right: 10px;
+    border-radius:3px;
+    border: 1px solid #b4b4b4;
+
+}
+
+@media screen and (max-width: 425px) {
+    .Nav-menu-content-item{
+        margin: 3px 0.5%;
+        width: 32.33%;
+        padding: 5px 0;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .Nav-menu-content-item{
+        margin: 3px 1%;
+        width: 48%;
+        padding: 5px 0;
+        font-size: 14px;
+    }
+
+    .Nav-menu-content-footer-location {
+        font-size: 13px;
+    }
+    .Nav-menu-content-footer-contact_img a{
+        font-size: 14px;
+    }
+    .Nav-menu-content-footer-location select {
+        font-size: 14px;
+    }
+
+}
+
+body{
+    height: 1500px;
 }

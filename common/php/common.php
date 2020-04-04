@@ -16,7 +16,7 @@ function insertHeadInfo() {
     $info .= '<title>'.$title.'</title>';
     $info .= '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css"></link>';
     if (!defined('NO_JQUERY')) {
-        $info .= '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>';
+        $info .= '<script src="/common/js/jquery.min.js"></script>';
     }
     $info .= insertCSS('/common/css/style.css');
     echo $info;
