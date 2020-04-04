@@ -5,4 +5,8 @@ $(document).ready(function(){
     // .mouseleave(function() {
     //     $(this).parent().find('.Menu-list-item-sub').removeClass('Menu-list-item-active');
     // });
+
+    $(".js-LocationButton").click(function (e) {
+        $(this).parent().toggleClass('Menu-branch-search-location-active');
+    });
 });
