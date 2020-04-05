@@ -1,10 +1,4 @@
 $(document).ready(function(){
-    // $(".js-MenuListItem").mouseenter(function() {
-    //     $(this).parent().find('.Menu-list-item-sub').addClass('Menu-list-item-active');
-    // })
-    // .mouseleave(function() {
-    //     $(this).parent().find('.Menu-list-item-sub').removeClass('Menu-list-item-active');
-    // });
 
     $(".js-LocationButton").click(function (e) {
         $(this).parent().toggleClass('Menu-branch-search-location-active');
@@ -19,4 +13,55 @@ $(document).ready(function(){
         }
     });
 
+    var carousel = $(".js-Carousel");
+    var carouselContent  = $(".js-CarouselContent");
+    var itemLength = $(".js-CarouselList .Carousel-content-item").length;
+    var isScrolling = false;
+    carouseInit();
+    $(window).on('resize',function () {
+        carouseInit();
+    });
+
+    var currentItem = 1;
+    $(".js-CarouselNavItem").click(function (e) {
+        if($(this).hasClass('Carousel-nav-item-active')){
+            return;
+        }
+        currentItem = $(this).attr('data-index');
+        scrollCarousel(currentItem);
+    });
+
+    $(".js-CarouselBtn").click(function (e) {
+        if($(this).hasClass('Carousel-content_btn_right')){
+            currentItem++;
+        } else {
+            currentItem--;
+        }
+        if(currentItem > itemLength ){
+            currentItem = 1
+        }else if(currentItem < 1) {
+            currentItem = itemLength
+        }
+        scrollCarousel(currentItem);
+    });
+
+    function carouseInit() {
+        var mWidth = carousel.width();
+        var mHeight = mWidth / 2.665;
+        carouselContent.height(mHeight);
+    }
+
+    function scrollCarousel(index) {
+        if(!isScrolling) {
+            isScrolling = true;
+            $(".Carousel-nav-item-active").removeClass('Carousel-nav-item-active');
+            var carouselItem = $("#carousel" + index);
+            $(".js-CarouselNavItem[data-index=" + index + "]").addClass('Carousel-nav-item-active');
+            $(".js-CarouselList").animate({
+                'left': 0 - carouselItem.position().left
+            }, 400, function () {
+                isScrolling = false;
+            });
+        }
+    }
 });
