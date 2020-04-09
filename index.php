@@ -22,6 +22,8 @@ require_once DOC_ROOT . '/common/php/common.php';
 <!--banner-->
 <?php include_once (DOC_ROOT .'/common/inc/header.php'); ?>
 <!--banner-->
+
+<!--carousel-->
     <div class="responsive">
         <div class="Banner">
             <div class="js-Carousel Carousel">
@@ -64,6 +66,64 @@ require_once DOC_ROOT . '/common/php/common.php';
                 </a>
             </div>
         </div>
+    </div>
+<!--carousel-->
+<!--    item list-->
+    <div class="responsive">
+        <div class="Product">
+            <div class="Product-head">
+                <div class="Product-head_txt">
+                    <a href="#">Điện thoại nổi bật</a>
+                </div>
+                <div class="Product-head-tag">
+                    <p>iPhone</p>
+                    <p>Samsung</p>
+                    <p>Xiaomi</p>
+                    <p>OPPO</p>
+                    <p>Nokia</p>
+                    <p>Realme</p>
+                    <p>ASUS</p>
+                    <p>Huewei</p>
+                    <p>VSmart</p>
+                    <p>Honor</p>
+                </div>
+            </div>
+            <div class="Product-content">
+                <div class="Product-content-list">
+                    <?php
+                    for($i = 1; $i < 11; $i++) {
+                    ?>
+                    <div class="Product-content-item">
+                        <div class="Product-content-item_img">
+                            <img src="/top/image/iphone11-purple-select-2019.webp" alt="">
+                        </div>
+                        <div class="Product-content-item-detail">
+                            <p class="Product-content-item-detail_name">iPhone 11 Chính hãng (VN/A)</p>
+                            <p class="Product-content-item-detail_price">19.100.000 ₫ <span>21.990.000 ₫</span></p>
+                            <p class="Product-content-item-detail_text">Giảm 200.000đ khi mua kèm tai nghe airpods và <strong> 1 km</strong>  khác</p>
+                        </div>
+                        <div class="Product-content-item-gift">
+                            <div class="js-productGiftButton Product-content-item-gift-btn"><i class="fas fa-gift"></i>Quà tặng</div>
+                            <div class="Product-content-item-gift-detail">
+                                <p class="Product-content-item-gift-detail_title">Trả góp 0%</p>
+                                <p class="Product-content-item-gift-detail_txt">Trả góp lãi suất 0% với Home Credit. Trả trước 50%, kỳ hạn 8 tháng (Áp dụng trên GIÁ NIÊM YẾT, không áp dụng cùng các khuyến mại khác)</p>
+                                <p class="Product-content-item-gift-detail_title">Chương trình khuyến mại:</p>
+                                <p class="Product-content-item-gift-detail_txt">Giảm 200.000đ khi mua kèm Tai nghe Airpods</p>
+                                <p class="Product-content-item-gift-detail_txt">Thu cũ đổi mới iPhone chính hãng VNA - Bù tiền ít nhất</p>
+                            </div>
+                        </div>
+                    </div>
+                        <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    item list-->
+
+    <div class="footer">
+
     </div>
 <?php insertJS('/top/js/script.js'); ?>
 </body>

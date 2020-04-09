@@ -32,7 +32,10 @@ $(document).ready(function(){
     });
 
     $(".js-CarouselBtn").click(function (e) {
-        if($(this).hasClass('Carousel-content_btn_right')){
+        if(isScrolling) {
+            return;
+        }
+            if($(this).hasClass('Carousel-content_btn_right')){
             currentItem++;
         } else {
             currentItem--;
@@ -52,16 +55,41 @@ $(document).ready(function(){
     }
 
     function scrollCarousel(index) {
-        if(!isScrolling) {
-            isScrolling = true;
-            $(".Carousel-nav-item-active").removeClass('Carousel-nav-item-active');
-            var carouselItem = $("#carousel" + index);
-            $(".js-CarouselNavItem[data-index=" + index + "]").addClass('Carousel-nav-item-active');
-            $(".js-CarouselList").animate({
-                'left': 0 - carouselItem.position().left
-            }, 400, function () {
-                isScrolling = false;
-            });
-        }
+        isScrolling = true;
+        $(".Carousel-nav-item-active").removeClass('Carousel-nav-item-active');
+        var carouselItem = $("#carousel" + index);
+        $(".js-CarouselNavItem[data-index=" + index + "]").addClass('Carousel-nav-item-active');
+        $(".js-CarouselList").animate({
+            'left': 0 - carouselItem.position().left
+        }, 400, function () {
+            isScrolling = false;
+        });
     }
+//
+
+
+//    product detail
+    var isGiftScroll = false;
+    $(".js-productGiftButton").click(function (e) {
+        if(isGiftScroll){
+            return;
+        }else{
+            isGiftScroll = true;
+        }
+        var parent = $(this).parent();
+        if(parent.hasClass('Product-content-item-gift-active')){
+            parent.removeClass('Product-content-item-gift-active');
+            setTimeout(function () {
+                parent.find('.Product-content-item-gift-detail').hide();
+                isGiftScroll = false;
+            },500)
+        }else{
+            parent.find('.Product-content-item-gift-detail').show();
+            setTimeout(function () {
+                parent.addClass('Product-content-item-gift-active');
+                isGiftScroll = false;
+            },20)
+
+        }
+    });
 });
