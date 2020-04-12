@@ -122,6 +122,15 @@ require_once DOC_ROOT . '/common/php/common.php';
     </div>
 <!--    item list-->
 
+<!--notification-->
+    <div class="Notification">
+        <div class="Notification-content">
+            <div class="Notification-content-message">
+                Đã thêm giỏ hàng thành công
+            </div>
+        </div>
+    </div>
+<!--notification-->
     <div class="footer">
 
     </div>

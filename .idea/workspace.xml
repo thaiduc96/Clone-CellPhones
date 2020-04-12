@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="05febb8e-eb2c-47cc-a00d-964e169f7b69" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/common/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/top/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/top/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/top/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/top/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,8 @@
       <workItem from="1586142014385" duration="4896000" />
       <workItem from="1586333380835" duration="845000" />
       <workItem from="1586334269772" duration="3814000" />
-      <workItem from="1586421141121" duration="5449000" />
+      <workItem from="1586421141121" duration="8152000" />
+      <workItem from="1586502657150" duration="2030000" />
     </task>
     <servers />
   </component>

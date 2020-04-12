@@ -66,3 +66,7 @@ input, select, textarea {
 .no-scroll{
     overflow: hidden;
 }
+
+.Notification {
+    background: red;
+}
