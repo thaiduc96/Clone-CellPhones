@@ -672,11 +672,12 @@ header{
 }
 
 .Product-content-item-gift-btn {
-    background: #e41e21;
+    background: #f28902;
     border-radius: 3px;
     cursor: pointer;
     color: #fff;
     padding: 5px 10px;
+    font-size: 13px;
 }
 
 
@@ -752,6 +753,72 @@ header{
     }
 }
 
+/*cart*/
+.Cart{
+    bottom: 80px;
+    left: 80px;
+    position: fixed;
+    transform: translateY(0);
+    transition: all ease .5s;
+}
+
+.Cart-disable{
+    transform: translateY(250px);
+}
+
+.Cart_icon{
+    background: #e11b1e;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;   /* vì là thẻ i. nên cho line height = height để nó vào giữa*/
+    height: 50px;
+    width: 50px;
+
+    position: relative ;
+}
+
+.Cart_icon::before{
+
+    border: 3px solid #fff;
+    background: #e11b1e ;
+    border-radius: 50%;
+    content: attr(data-count);
+
+    line-height: 17px;
+    position: absolute;
+
+    width: 25px;
+    right: -7px;
+    height: 25px;
+    bottom: -5px;
+
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.Product-content-item-cart{
+    position: absolute;
+    bottom: 132px;
+    left: 5px;
+}
+
+.Product-content-item-cart_btn{
+    background: #e41e21;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius:3px;
+    user-select: none;
+    font-size: 13px;
+}
+
+.Product-content-item-cart_btn:hover{
+    opacity: 0.85;
+}
+/*cart*/
 
 /*footer*/
 
@@ -761,3 +828,5 @@ header{
     margin-top: 50px;
 }
 /*footer*/
+
+

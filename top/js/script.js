@@ -92,4 +92,8 @@ $(document).ready(function(){
 
         }
     });
+
+    setTimeout(function () {
+        $(".js-cart").removeClass('Cart-disable');
+    },1000)
 });

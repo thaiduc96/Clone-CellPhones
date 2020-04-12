@@ -112,6 +112,9 @@ require_once DOC_ROOT . '/common/php/common.php';
                                 <p class="Product-content-item-gift-detail_txt">Thu cũ đổi mới iPhone chính hãng VNA - Bù tiền ít nhất</p>
                             </div>
                         </div>
+                        <div class="Product-content-item-cart">
+                            <div class="js-productCartButton Product-content-item-cart_btn"><i class="fas fa-cart-plus"></i>Thêm</div>
+                        </div>
                     </div>
                         <?php
                     }
@@ -121,6 +124,11 @@ require_once DOC_ROOT . '/common/php/common.php';
         </div>
     </div>
 <!--    item list-->
+    <div class="js-cart Cart Cart-disable">
+        <div class="Cart_icon" data-count="3">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </div>
 
     <div class="footer">
 
